@@ -1,0 +1,12 @@
+FROM eclipse-temurin:17-jdk
+RUN apt-get update && apt-get install -y maven
+# copy source code
+RUN mkdir /app
+COPY ./ /app/
+WORKDIR /app
+RUN mvn install
+WORKDIR /app/target
+EXPOSE 8080
+ENV DB_URI=mongodb
+ENTRYPOINT ["java", "-Dspring.data.mongodb.host=${DB_URI}", "" , "-jar","demo-0.0.1-SNAPSHOT.jar"]
+CMD [ "/bin/bash"]

@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  mqtt:
+    container_name: mqtt
+    build: mosquitto/.
+    ports:
+     - "8083:8083"
+     - "1883:1883"
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  backend:
+    container_name: spring-boot-backend
+    build: demo/.
+    ports:
+     - "8080:8080"
+    depends_on:
+      - mqtt
+      - mongodb
+
+  frontend:
+    container_name: node-frontend
+    build: my-app/.
+    ports:
+     - "4001:3000"
+    depends_on:
+     - backend

@@ -1,0 +1,80 @@
+.content{
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 20px 35px 20px;
+    align-self: stretch;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+
+.Details{
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    align-self: stretch;
+    margin: 0px;
+}
+
+
+
+.TitleTop {
+  display: flex;
+  position: relative;
+  isolation: isolate;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+  align-self: stretch;
+  margin: 0px;
+}
+
+.Title {
+    /* textAlign: left;
+    whiteSpace: pre-wrap;
+    fontSynthesis: none; */
+    /* fontStyle: normal;
+    fontFamily: Heebo;
+    fontWeight: 700;
+    fontSize: 38px;
+    letterSpacing: 0px;
+    text-transform: none; 
+    margin: 0px;
+}
+  
+  
+  
+.Details1{
+    /* textAlign: left;
+    whiteSpace: pre-wrap;
+    fontSynthesis: none; */
+    /* fontStyle: normal;
+    fontFamily: Heebo;
+    fontWeight: 400;
+    fontSize: 16px;
+    letterSpacing: 0.15000000596046448px;
+    textDecoration: none; */
+    line-height: 150%; 
+    text-transform: none; 
+    align-Self: stretch; 
+    margin: 8px 0px 0px 0px;
+  }
+  
+ .ButtonContained {
+    margin: 8px 0px 0px 0px;
+  }
